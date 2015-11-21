@@ -42,5 +42,12 @@ ol.horizontal li,ul.horizontal li {
 }
 
 #headerLogin button {
+	border-radius: 5px;
 	display: block
+}
+
+#headerLoginDialog {
+	position: fixed;
+	display: none;
+	text-align: center
 }

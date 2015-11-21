@@ -1,14 +1,24 @@
 <link rel="stylesheet" type="text/css" href="../styles/common.css">
+<script src="../scripts/common.js"></script>
 
 <div id="header">
 	<div id="headerLogin" style="float: right">
-		<button>LOG IN</button>
+		<button onclick="login()">LOG IN</button>
+		
+		<!-- TODO Style this form -->
+		<form id="headerLoginDialog" onsubmit="submitLogin()">
+			<input type="text" name="username" placeholder="Username">
+			<br>
+			<input type="password" name="password" placeholder="Password">
+			<br>
+			<input type="submit" style="float: right">
+		</form>
 		<br>
 		<button>Don't have an account?</button>
 	</div>
 
 	<ul class="horizontal" id="headerNav">
-		<li id="headerTitle"><a href="index.php">GameTindr</a></li>
+		<li id="headerTitle"><a href="index.php">Gamr</a></li>
 		<li><a href="about.php">About</a></li>
 		<li><a href="find.php">Find A LAN</a></li>
 		<li><a href="host.php">Host A LAN</a></li>
