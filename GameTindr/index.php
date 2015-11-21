@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <?php include("include/common.html") ?>
+    <?php include("include/common.html"); ?>
     <meta charset="utf-8">
     <title>Gamr</title>
   </head>
