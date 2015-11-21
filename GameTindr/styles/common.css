@@ -1,12 +1,22 @@
 ol.horizontal li,ul.horizontal li {
 	display:inline;
-	padding-right:20px
 }
 
 #headerTitle a {
 	display: inline;
 	color: #FF7D39 !important;
 	font-size: 1.5em
+}
+
+#headerNav {
+	width: 100%;
+	position: absolute;
+	bottom: -3px;
+	text-align: center
+}
+
+#headerNav li {
+	padding-right: 10%
 }
 
 #headerNav li a {
@@ -21,12 +31,16 @@ ol.horizontal li,ul.horizontal li {
 }
 
 #header {
-	height: 200px;
+	min-height: 150px;
+	height: 20%;
 	position: relative;
 	background-color: #8539B1
 }
 
-#headerNav {
-	position: absolute;
-	bottom: 0px
+#headerLogin {
+	border: 1px solid black
+}
+
+#headerLogin button {
+	display: block
 }
