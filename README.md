@@ -1,2 +1,2 @@
 # WildHacks
-A group project for WildHack
+A group project for WildHacks
