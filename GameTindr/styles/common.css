@@ -3,14 +3,15 @@ ol.horizontal li,ul.horizontal li {
 	padding-right:20px
 }
 
-#headerTitle {
+#headerTitle a {
 	display: inline;
+	color: #FF7D39 !important;
 	font-size: 1.5em
 }
 
 #headerNav li a {
+	color: black;
 	font-weight: normal;
-	color: #FF7D39;
 	text-decoration: none
 }
 
