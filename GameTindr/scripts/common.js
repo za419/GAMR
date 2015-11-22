@@ -1,3 +1,7 @@
+function signUp() {
+  window.location.replace('register.php');
+}
+
 $(document).ready(function()
 {
 	$('#loginButton').click(function()
