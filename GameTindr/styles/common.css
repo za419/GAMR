@@ -9,7 +9,8 @@ ol.horizontal li,ul.horizontal li {
 
 #headerTitle a {
 	color: #FF7D39 !important;
-	font-size: 1.5em
+	font-size: 1.5em;
+	font-family: 'Quicksand', sans-serif
 }
 
 #headerNav {
@@ -22,7 +23,7 @@ ol.horizontal li,ul.horizontal li {
 }
 
 #headerNav li {
-	padding-right: 5%
+	padding-right: 5%;
 }
 
 #headerNav li a {
@@ -81,4 +82,8 @@ ol.horizontal li,ul.horizontal li {
 	position: fixed;
 	display: none;
 	text-align: center
+}
+
+#footer {
+	text-align: center;
 }
