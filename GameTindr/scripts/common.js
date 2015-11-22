@@ -1,6 +1,6 @@
 function login()
 {
-	document.getElementById("headerLoginDialog").style.display="inline"
+	document.getElementById("headerLoginDialog").style.display="block"
 }
 
 function submitLogin()
