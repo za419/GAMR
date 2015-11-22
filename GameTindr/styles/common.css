@@ -247,6 +247,7 @@ blockquote:before {
 
 #loginForm {
 	width:20%;
+	min-width:240px;
 	margin: auto;
 	color:white;
 }
@@ -277,4 +278,23 @@ blockquote:before {
 	transition: background .3s ease-out;
 	background-color:#8539B1;
 	color:white;
+}
+
+#userProfile {
+	width:80%;
+	margin:auto;
+	white-space: nowrap;
+}
+
+#userPhoto {
+	margin-top: 15px;
+	border-radius:100%;
+	display:inline-block
+}
+
+#userInfo {
+	width: 65%;
+	min-width:450px;
+	list-style-type: none;
+	display:inline-block
 }
