@@ -1,5 +1,5 @@
 # WildHacks
-<h2 style="color:#FF7D39">GAMR</h2>
+## GAMR
 A group project for the WildHacks 2015 hackathon.
 
 Group members:
