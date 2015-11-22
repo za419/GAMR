@@ -1,14 +1,11 @@
-function login()
+$(document).ready(function()
 {
-	document.getElementById("headerLoginDialog").style.display="inline"
-}
-
-function submitLogin()
-{
-	document.getElementById("headerLoginDialog").style.display="none"
-}
-
-function signUp()
-{
-  window.location.replace("register.php");
-}
+  $('#headerLoginDialog').click(function()
+  	{
+  		$('#headerLoginBox').slideDown();
+  	});
+  	$('#login-submit').click(function()
+  	{
+  		$('#headerLoginBox').slideUp();
+  	});
+});
