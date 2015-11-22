@@ -1,9 +1,11 @@
-function login()
+$(document).ready(function()
 {
-	document.getElementById("headerLoginDialog").style.display="block"
-}
-
-function submitLogin()
-{
-	document.getElementById("headerLoginDialog").style.display="none"
-}
+	$('#headerLoginDialog').click(funciton()
+	{
+		$('#headerLoginBox').slideDown();
+	});
+	$('#login-submit').click(function()
+	{
+		$('#headerLoginBox').slideUp();
+	});
+});
