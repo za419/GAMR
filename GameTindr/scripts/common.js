@@ -1,6 +1,6 @@
 $(document).ready(function()
 {
-	$('#headerLoginDialog').click(funciton()
+	$('#headerLoginDialog').click(function()
 	{
 		$('#headerLoginBox').slideDown();
 	});
