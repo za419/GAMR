@@ -1,8 +1,17 @@
 <div id="header">
 	<div id="headerLogin" style="float: right">
-		<button>LOG IN</button>
+		<button onclick="login()">LOG IN</button>
+
+		<!-- TODO Style this form -->
+		<form id="headerLoginDialog" onsubmit="submitLogin()">
+			<input type="text" name="username" placeholder="Username">
+			<br>
+			<input type="password" name="password" placeholder="Password">
+			<br>
+			<input type="submit" style="float: right">
+		</form>
 		<br>
-		<button>Don't have an account?</button>
+		<a href="register.php">Don't have an account?</a>
 	</div>
 
 	<ul class="horizontal" id="headerNav">
