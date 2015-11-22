@@ -28,7 +28,7 @@ ol.horizontal li,ul.horizontal li {
 }
 
 #headerNav li a {
-	color: black;
+	color: #FFF;
 	font-weight: normal;
 	text-decoration: none
 }
@@ -57,7 +57,37 @@ ol.horizontal li,ul.horizontal li {
 }
 
 #headerLoginDialog {
+	z-index: 10;
+	width: 100px;
 	position: fixed;
+	right: 210px;
 	display: none;
 	text-align: center
+}
+
+#title {
+	display: block;
+	margin: auto;
+	text-align: center
+}
+
+.teammate-name {
+	font-weight: bold;
+	color: #4e2a84
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
 }
