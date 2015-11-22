@@ -1,5 +1,7 @@
 # WildHacks
+
 ## GAMR
+
 A group project for the WildHacks 2015 hackathon.
 
 Group members:
