@@ -6,7 +6,11 @@ ol.horizontal li,ul.horizontal li {
 	display:inline;
 }
 
-#headerTitle a {
+.gamr * {
+	color: #FF7D39 !important;
+}
+
+.gamr {
 	color: #FF7D39 !important;
 	font-size: 1.5em
 }
@@ -30,13 +34,11 @@ ol.horizontal li,ul.horizontal li {
 }
 
 #headerNav li a:hover {
-	text-decoration: underline;
-	font-style: italic
+	text-decoration: underline
 }
 
 #header {
-	min-height: 150px;
-	height: 20%;
+	height: 85px;
 	padding: 0%;
 	width: 100%;
 	margin: 0;
