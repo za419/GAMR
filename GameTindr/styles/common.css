@@ -1,0 +1,243 @@
+html, body {
+	font-family: 'Quicksand', sans-serif;
+	margin: 0
+}
+
+ol.horizontal li,ul.horizontal li {
+	display:inline;
+}
+
+.gamr * {
+	color: #FF7D39 !important;
+}
+
+.gamr {
+	color: #FF7D39 !important;
+	font-size: 1.5em;
+	font-family: 'Quicksand', sans-serif
+}
+
+#headerNav {
+	position: absolute;
+	left:0;
+	right:0;
+	bottom: -3px;
+	text-align: center;
+	font-family: 'Raleway', sans-serif
+}
+
+#headerNav li {
+	padding-right: 5%;
+}
+
+#headerNav li a {
+	color: #FFF;
+	font-weight: normal;
+	text-decoration: none
+}
+
+#headerNav li a:hover {
+	text-decoration: underline
+}
+
+#header {
+	height: 85px;
+	padding: 0%;
+	width: 100%;
+	margin: 0;
+	position: relative;
+	top: 0px;
+	box-shadow: 0px 3px 2px;
+	background-color: #8539B1
+}
+
+#footer {
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	background-color: #8539B1;
+	box-shadow: 0px -3px 2px;
+}
+
+#footerText {
+	color:white;
+	text-align:center
+}
+
+#footerText a {
+	color:white;
+	text-decoration: none
+}
+#footerText a:hover {
+	text-decoration: underline
+}
+
+#donateButton {
+	background-color:#8539B1;
+	display:inline-block;
+	border:none;
+	cursor:pointer;
+	color:white;
+	padding: 10px 40px;
+	text-decoration:none;
+	border-radius:7px;
+	font-size: 20px;
+	font-family: 'Quicksand', sans-serif;
+	float:center;
+}
+
+#donateButton:hover {
+	-webkit-transition: background .5s ease-out;
+	-moz-transition: background .5s ease-out;
+	-o-transition: background .5s ease-out;
+	transition: background .5s ease-out;
+	color:white;
+	background-color:#FF7D39;
+}
+
+#donateButtonDiv {
+	margin-left: 43.2%;
+}
+
+#headerLogin {
+	margin-right: 5px;
+}
+
+#headerLogin button {
+	background-color:#FF7D39;
+	font-family:'Raleway',sans-serif;
+	display:inline-block;
+	border:none;
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+	cursor:pointer;
+	color:white;
+	padding:5px 10px;
+	text-decoration:none;
+	font-weight: bold;
+	margin:0;
+}
+
+#headerLogin button:hover {
+	-webkit-transition: background .3s ease-out;
+	-moz-transition: background .3s ease-out;
+	-o-transition: background .3s ease-out;
+	transition: background .3s ease-out;
+	background-color:white;
+	color:#FF7D39;
+}
+
+
+#headerLogin a {
+	background-color:orange;
+	color:white;
+	font-size: small;
+	text-decoration:none
+	margin:0;
+	text-decoration:none;
+	font-weight: bold;
+}
+
+#headerLogin button:hover {
+	-webkit-transition: background .3s ease-out;
+	-moz-transition: background .3s ease-out;
+	-o-transition: background .3s ease-out;
+	transition: background .3s ease-out;
+	background-color:white;
+	color:#FF7D39;
+}
+
+
+#headerLogin a {
+	background-color:orange;
+	color:white;
+	font-size: small;
+	text-decoration:none
+}
+
+#headerLoginBox {
+	background-color:white;
+	width: 100%;
+	height: 85px;
+	display: none;
+	position: relative;
+	top: 0px
+}
+
+#headerLoginDialog form {
+ 	position: relative;
+	top: 4%;
+	height: 100%;
+	width: 90%;
+	left: 2.5%
+}
+
+#headerLoginDialog form input {
+	width: 100%
+}
+
+#headerLoginDialog form input[type="submit"] {
+	width: 5em;
+	float: right;
+	background:#FF7D39;
+	display: inline-block;
+	border:none;
+	border-radius: 7px;
+	cursor: pointer;
+	color:white;
+	padding:5px 10px;
+	margin:0;
+	font-weight:bold;
+}
+
+#headerLoginDialog form input[type="submit"]:hover {
+	-webkit-transition: background .3s ease-out;
+	-moz-transition: background .3s ease-out;
+	-o-transition: background .3s ease-out;
+	transition: background .3s ease-out;
+	background-color:white;
+	color:#FF7D39;
+}
+
+#title {
+	display: block;
+	margin: auto;
+	font-weight:normal;
+	text-align: center;
+	margin-top: 23px;
+}
+
+#title .gamr {
+	font-size: 1em;
+}
+
+.info {
+	margin: auto;
+	width: 95%
+}
+
+.info blockquote {
+	margin: auto;
+	width: 90%;
+}
+
+.teammate-name {
+	font-weight: bold;
+	color: #4e2a84
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #CCC;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #CCC;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
