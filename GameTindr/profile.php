@@ -2,6 +2,7 @@
 <html>
   <head>
     <?php include("include/common.html"); ?>
+    <link rel="stylesheet" type="text/css" href="profile.css">
     <meta charset="utf-8">
     <title>Profile</title>
   </head>

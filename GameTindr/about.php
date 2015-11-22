@@ -26,7 +26,7 @@
     </p>
     <br>
     <div id=donateButtonDiv>
-      <button id="donateButton">Donate</button>
+      <button id="donateButton" onclick="donateButton()">Donate</button>
       <br>
     </div>
     <?php include("include/footer.html"); ?>
