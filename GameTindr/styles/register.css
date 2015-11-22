@@ -1,0 +1,26 @@
+/* Forces changes to common.css styles for register
+ * Since register.php cannot have a user log in and should not have a user register, these sections can be removed
+ * Because these sections can be removed, the header can be smaller
+ * Because the header can be smaller, the nav bar should be centered vertically in it. */
+
+#headerLogin {
+	display: none !important
+}
+
+#header {
+	min-height: 50px !important;
+	
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	
+	height: 7% !important
+}
+
+#headerNav {
+	bottom: 50% !important;
+	
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
