@@ -75,16 +75,18 @@ ol.horizontal li,ul.horizontal li {
 
 #donateButton {
 	background-color:#8539B1;
-	display:inline-block;
-	border:none;
+	border: none;
 	cursor:pointer;
+	display:block;
+	margin:auto;
+	width:12.5%;
+	min-width:10em;
 	color:white;
 	padding: 10px 40px;
 	text-decoration:none;
 	border-radius:7px;
 	font-size: 20px;
 	font-family: 'Quicksand', sans-serif;
-	float:center;
 }
 
 #donateButton:hover {
@@ -94,10 +96,6 @@ ol.horizontal li,ul.horizontal li {
 	transition: background .5s ease-out;
 	color:white;
 	background-color:#FF7D39;
-}
-
-#donateButtonDiv {
-	margin-left: 43.2%;
 }
 
 #headerLogin {
@@ -264,7 +262,9 @@ blockquote:before {
 	border:none;
 	cursor:pointer;
 	color:#FF7D39;
-	border-radius:2px;
+	font-family:'Raleway',sans-serif;
+	font-size:12px;
+	border-radius:5px;
 	text-decoration:none;
 	font-weight: bold;
 	margin:0;
