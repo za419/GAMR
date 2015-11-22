@@ -9,13 +9,23 @@
 
 
 <div id="headerLoginBox">
-	<form>
-		<input type="text" name="username" placeholder="Username">
-		<br>
-		<input type="password" name="password" placeholder="Password">
-		<br>
-		<input id="login-submit" type="submit">
-	</form>
+	<div id="loginForm">
+    <form style="padding:7px 0px">
+      <div>
+        <label for="loginUsername">Username</label>
+  		  <input id="loginUsername"type="text" name="username" placeholder="Username">
+      </div>
+      <div style="padding:7px 0px">
+        <label for="loginPassword">Password</label>
+  		  <input type="password" name="password" placeholder="Password">
+        <br>
+        <div style="margin-top:7px;">
+          <input id="login-submit" type="submit">
+        </div>
+      </div>
+  		<br>
+  	</form>
+  </div>
 </div>
 
 <div id="header">
