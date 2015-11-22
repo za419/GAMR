@@ -1,12 +1,13 @@
 <!-- For standalone testing, uncomment the following -->
 
-<!-- <link rel="stylesheet" type="text/css" href="../styles/common.css">
-<script src="../scripts/common.js"></script> -->
+<link rel="stylesheet" type="text/css" href="../styles/common.css">
+<script src="../scripts/common.js"></script> 
 
 <div id="header">
 	<div id="headerLogin" style="float: right">
 		<button onclick="login()">LOG IN</button>
-		
+    <button id="signUpButton" onclick="signUp()">SIGN UP</button>
+
 		<!-- TODO Style this form -->
 		<form id="headerLoginDialog" onsubmit="submitLogin()">
 			<input type="text" name="username" placeholder="Username">
@@ -15,8 +16,6 @@
 			<br>
 			<input type="submit" style="float: right">
 		</form>
-		<br>
-		<a href="register.php">Don't have an account?</a>
 	</div>
 
 	<ul class="horizontal" id="headerNav">

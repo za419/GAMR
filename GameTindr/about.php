@@ -11,14 +11,17 @@
 		<br>
 		<p class="info">
 			&nbsp;&nbsp;<span class="gamr">GAMR</span> was written as a team project for the WildHacks 2015 hackathon. It was conceptualized as a way for people who wish to find a party with which to play a multi-player game to find one another and play together. As team member <span class="teammate-name">Murphy Angelo</span> said,
+		</p>
 		<p class="info">
 			<blockquote>I think that it's disappointing how there are a lot of cool games that people don't really play online, and that you can't really find anyone to play with locally. I wish there was an easier way to find people to play with.</blockquote>
+		</p>
 		<p class="info">
 			Fellow team members <span class="teammate-name">Elana Stettin</span> and <span class="teammate-name">Ryan Hodin</span> agreed with this sentiment, and thus <span class="gamr">GAMR</span> was born.
 		</p>
 		<br>
 		<p class="info">
 			<span class="gamr">GAMR</span> continues to this day to be funded entirely by donations. If you like it, please consider clicking the button below to donate.
+		</p>
       <?php include("include/footer.html"); ?>
   </body>
 </html>
