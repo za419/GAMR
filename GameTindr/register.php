@@ -8,11 +8,38 @@
   </head>
   <body>
       <?php include("include/header.html"); ?>
+      <h1 id="title">Thank you for choosing <span class="gamr">GAMR</span></h1>
+      <br>
+      <p class="info" style="text-align:center !important">
+        We'll just need a little bit of information from you to optimize your experience.
+      </p>
+      <br>
       <form id="registerForm">
-          <input type="text" name="username" placeholder="Username"><br>
-          <input type="password" name="password" placeholder="Password"><br>
-          <input type="password" name="confirm-password" placeholder="Confirm password"><br>
-          <input type="submit">
+          <div>
+            <label for="username">Username</label>
+              <input type="text" id="username" name="username" placeholder="Username"/><br>
+          </div>
+          <div>
+            <label for="password">Password</label>
+              <input type="password" id="password"name="password" placeholder="Password"/><br>
+          </div>
+          <div>
+            <label for="confirm-password">Confirm Password</label>
+              <input type="password" id="confirm-password" name="confirm-password"
+                placeholder="Confirm Password"/><br>
+          </div>
+          <div>
+            <label for="email">Email</label>
+              <input type="text" id="email" name="email" placeholder="Email"><br>
+          </div>
+          <div>
+            <label for="confirm-email">Confirm Email</label>
+              <input type="text" id="confirm-email" name="confirm-email"
+                placeholder="Confirm Email"/><br><br>
+                <div>
+                  <input type="submit" id="submit">
+                </div>
+          </div>
       </form>
       <?php include("include/footer.html"); ?>
   </body>

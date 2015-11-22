@@ -6,8 +6,8 @@
     <title>About</title>
   </head>
   <body>
-      <?php include("include/header.html"); ?>
-      <h1 id="title">About <span class="gamr">GAMR</span></h1>
+    <?php include("include/header.html"); ?>
+    <h1 id="title">About <span class="gamr">GAMR</span></h1>
 		<p class="info">
 			<span class="gamr">GAMR</span> was written as a team project
       for the WildHacks 2015 hackathon. It was conceptualized as a way for people
@@ -24,7 +24,7 @@
     </p>
     <p class="info">
 			<span class="gamr">GAMR</span> continues to this day to be funded entirely by
-      donations. If you like it, please consider clicking the button below to donate.
+      donations. If you like it, please consider donating via the button below.
     </p>
     <br>
     <div id=donateButtonDiv>
