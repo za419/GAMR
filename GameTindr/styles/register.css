@@ -9,18 +9,23 @@
 
 #header {
 	min-height: 50px !important;
-	
+
 	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
 	transform-style: preserve-3d;
-	
+
 	height: 7% !important
 }
 
 #headerNav {
 	bottom: 50% !important;
-	
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
+
+	-webkit-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	transform: translateY(100%);
+}
+
+#registerForm {
+	width: .2em;
+	margin: auto;
 }
