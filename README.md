@@ -3,8 +3,11 @@
 A group project for the WildHacks 2015 hackathon.
 
 Group members:
+
   Murphy Angelo
+  
   Ryan Hodin
+  
   Elana Stettin
 
 
