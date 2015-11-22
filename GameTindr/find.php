@@ -7,6 +7,7 @@
   </head>
   <body>
       <?php include("include/header.html"); ?>
+      <p style="text-align:center;">DONATE</p>
       <?php include("include/footer.html"); ?>
   </body>
 </html>
