@@ -18,13 +18,11 @@
         find anyone to play with locally. I wish there was an easier way to find
         people to play with.</blockquote>
 			<p class="info">Fellow team members <span class="teammate-name">Elana Stettin</span>
-         and <span class="teammate-name">Ryan Hodin</span> agreed with this sentiment, and
-         thus <span class="gamr">GAMR</span> was born.
+         and <span class="teammate-name">Ryan Hodin</span> agreed with this sentiment, and thus <span class="gamr">GAMR</span> was born.
       </p>
     </p>
     <p class="info">
-			<span class="gamr">GAMR</span> continues to this day to be funded entirely by
-      donations. If you like it, please consider donating via the button below.
+		<span class="gamr">GAMR</span> continues to this day to be funded entirely by donations. If you like it, please consider donating via the button below.
     </p>
     <br>
     <div id=donateButtonDiv>

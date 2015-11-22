@@ -4,12 +4,12 @@ function signUp() {
 
 $(document).ready(function()
 {
-  $('#loginButton').click(function()
-  	{
-      $('#headerLoginBox').slideDown();
-  	});
-  	$('#login-submit').click(function()
-  	{
-  		$('#headerLoginBox').slideUp();
-  	});
+	$('#loginButton').click(function()
+	{
+		$('#headerLoginBox').slideDown();
+	});
+	$('#login-submit').click(function()
+	{
+		$('#headerLoginBox').slideUp();
+	});
 });
