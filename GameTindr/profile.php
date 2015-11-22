@@ -9,7 +9,7 @@
   <body>
       <?php include("include/header.html"); ?>
       <div id="userProfile">
-        <img id="userPhoto" src="images/JohnFranklin/1500x1457.jpeg" width="200px" height="200px">
+        <img id="userPhoto" src="images/doesnotexist/1500x1457.jpeg" width="200px" height="200px">
           &nbsp;
           <ul id="userInfo">
             <li>Username: <span>Murf</span></p>
