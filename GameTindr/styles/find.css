@@ -1,0 +1,12 @@
+#no-game {
+	text-align: center
+}
+
+#no-game a {
+	text-decoration:none;
+	color:#FF7D39
+}
+
+#no-game a:hover {
+	text-decoration:underline
+}
