@@ -1,8 +1,12 @@
+function signUp() {
+  window.location.replace('register.php');
+}
+
 $(document).ready(function()
 {
-  $('#headerLoginDialog').click(function()
+  $('#loginButton').click(function()
   	{
-  		$('#headerLoginBox').slideDown();
+      $('#headerLoginBox').slideDown();
   	});
   	$('#login-submit').click(function()
   	{

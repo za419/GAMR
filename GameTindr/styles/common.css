@@ -46,10 +46,7 @@ ol.horizontal li,ul.horizontal li {
 	width: 100%;
 	margin: 0;
 	position: relative;
-<<<<<<< HEAD
-=======
 	top: 0px;
->>>>>>> 69aa3c4c4827959e33e9df72c4c229ea0552b2bd
 	box-shadow: 0px 3px 2px;
 	background-color: #8539B1
 }
@@ -77,11 +74,7 @@ ol.horizontal li,ul.horizontal li {
 }
 
 #donateButton {
-<<<<<<< HEAD
 	background-color:#8539B1;
-=======
-	background-color:purple;
->>>>>>> 69aa3c4c4827959e33e9df72c4c229ea0552b2bd
 	display:inline-block;
 	border:none;
 	cursor:pointer;
@@ -166,8 +159,8 @@ ol.horizontal li,ul.horizontal li {
 #headerLoginBox {
 	background-color:white;
 	width: 100%;
-	height: 0;
-
+	height: 85px;
+	display: none;
 	position: relative;
 	top: 0px
 }
