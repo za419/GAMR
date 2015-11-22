@@ -1,7 +1,9 @@
 /* Forces changes to common.css styles for register
- * Since register.php cannot have a user log in and should not have a user register, these sections can be removed
- * Because these sections can be removed, the header can be smaller
- * Because the header can be smaller, the nav bar should be centered vertically in it. */
+ * Since register.php cannot have a user log in and should not have a user register, these sections can be removed.
+ * Because these sections can be removed, the header can be smaller.
+ * Because the header can be smaller, the nav bar should be centered vertically in it.
+ * 
+ * Heavy use of !important is necessary to override common.css. */
 
 #headerLogin {
 	display: none !important
