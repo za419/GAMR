@@ -1,5 +1,5 @@
-body, html {
-	width: 100%
+html, body {
+	margin: 0
 }
 
 ol.horizontal li,ul.horizontal li {
@@ -7,14 +7,14 @@ ol.horizontal li,ul.horizontal li {
 }
 
 #headerTitle a {
-	display: inline;
 	color: #FF7D39 !important;
 	font-size: 1.5em
 }
 
 #headerNav {
-	width: 100%;
 	position: absolute;
+	left:0;
+	right:0;
 	bottom: -3px;
 	text-align: center
 }
@@ -37,11 +37,15 @@ ol.horizontal li,ul.horizontal li {
 #header {
 	min-height: 150px;
 	height: 20%;
+	padding: 0%;
+	width: 100%;
+	margin: 0;
 	position: relative;
 	background-color: #8539B1
 }
 
 #headerLogin {
+	margin-right: 5px;
 	border: 1px solid black
 }
 
