@@ -1,0 +1,61 @@
+html, body {
+	margin: 0
+}
+
+ol.horizontal li,ul.horizontal li {
+	display:inline;
+}
+
+#headerTitle a {
+	color: #FF7D39 !important;
+	font-size: 1.5em
+}
+
+#headerNav {
+	position: absolute;
+	left:0;
+	right:0;
+	bottom: -3px;
+	text-align: center
+}
+
+#headerNav li {
+	padding-right: 10%
+}
+
+#headerNav li a {
+	color: black;
+	font-weight: normal;
+	text-decoration: none
+}
+
+#headerNav li a:hover {
+	text-decoration: underline;
+	font-style: italic
+}
+
+#header {
+	min-height: 150px;
+	height: 20%;
+	padding: 0%;
+	width: 100%;
+	margin: 0;
+	position: relative;
+	background-color: #8539B1
+}
+
+#headerLogin {
+	margin-right: 5px;
+	border: 1px solid black
+}
+
+#headerLogin button {
+	border-radius: 5px;
+	display: block
+}
+
+#headerLoginDialog {
+	position: fixed;
+	display: none;
+	text-align: center
+}
