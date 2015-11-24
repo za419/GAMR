@@ -1,0 +1,2 @@
+Redirect /include/* /index.php
+Redirect /index.php /about.php
