@@ -3,8 +3,9 @@
   <head>
     <?php include("include/common.html"); ?>
     <link rel="stylesheet" type="text/css" href="profile.css">
-    <meta charset="utf-8">
-    <title>Profile</title>
+    <meta name="apple-mobile-web-app-title" content="GAMR Profile">
+    <meta name="og:title" content="GAMR Profile">
+    <title>GAMR Profile</title>
   </head>
   <body>
       <?php include("include/header.html"); ?>

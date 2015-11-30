@@ -3,7 +3,8 @@
   <head>
     <?php include("include/common.html"); ?>
     <link rel="stylesheet" type="text/css" href="styles/donate.css">
-    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-title" content="Donate to GAMR">
+    <meta name="og:title" content="Donate to GAMR">
     <title>Donate!</title>
   </head>
   <body>

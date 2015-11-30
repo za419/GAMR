@@ -2,8 +2,9 @@
 <html>
   <head>
     <?php include("include/common.html"); ?>
-    <meta charset="utf-8">
-    <title>About</title>
+    <meta name="apple-mobile-web-app-title" content="About GAMR">
+    <meta name="og:title" content="About GAMR">
+    <title>About GAMR</title>
   </head>
   <body>
     <?php include("include/header.html"); ?>
