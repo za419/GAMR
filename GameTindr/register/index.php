@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <?php include("include/common.html"); ?>
-    <link rel="stylesheet" type="text/css" href="styles/register.css">
+    <?php include("../include/common.html"); ?>
+    <link rel="stylesheet" type="text/css" href="../styles/register.css">
     <meta charset="utf-8">
     <title>Gamr</title>
   </head>
   <body>
-      <?php include("include/header.html"); ?>
+      <?php include("../include/header.html"); ?>
       <h1 id="title">Thank you for choosing <span class="gamr">GAMR</span></h1>
       <br>
       <p class="info" style="text-align:center !important">
@@ -41,6 +41,6 @@
                 </div>
           </div>
       </form>
-      <?php include("include/footer.html"); ?>
+      <?php include("../include/footer.html"); ?>
   </body>
 </html>
