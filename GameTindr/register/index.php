@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <?php include("../include/common.html"); ?>
+    <?php include("include/common.html"); ?>
     <link rel="stylesheet" type="text/css" href="../styles/register.css">
-    <meta charset="utf-8">
-    <title>Gamr</title>
+    <meta name="apple-mobile-web-app-title" content="Register for GAMR">
+    <meta name="og:title" content="Register for GAMR">
+    <title>Register for GAMR</title>
   </head>
   <body>
       <?php include("../include/header.html"); ?>
