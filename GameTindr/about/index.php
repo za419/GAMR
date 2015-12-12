@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <?php include("include/common.html"); ?>
+  <?php include("../include/common.html"); ?>
   <meta charset="utf-8">
   <title>About</title>
 </head>
 <body>
-  <?php include("include/header.html"); ?>
+  <?php include("../include/header.html"); ?>
   <h1 id="title">About <span class="gamr">GAMR</span></h1>
   <p class="info">
     <span class="gamr">GAMR</span> was written as a team project
@@ -29,6 +29,6 @@
       <button id="donateButton" onclick="donateButton()">Donate</button>
       <br>
     </div>
-    <?php include("include/footer.html"); ?>
+    <?php include("../include/footer.html"); ?>
   </body>
   </html>

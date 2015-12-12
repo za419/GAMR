@@ -8,35 +8,34 @@
 
 <div id="headerLoginBox">
 	<div id="loginForm">
-    <form style="padding:7px 0px">
-      <div>
-        <label for="loginUsername">Username</label>
-  		  <input id="loginUsername"type="text" name="username" placeholder="Username">
-      </div>
-      <div style="padding:7px 0px">
-        <label for="loginPassword">Password</label>
-  		  <input type="password" name="password" placeholder="Password">
-        <br>
-        <div style="margin-top:7px;">
-          <input id="login-submit" type="submit">
-        </div>
-      </div>
-  		<br>
-  	</form>
-  </div>
+		<form>
+			<div>
+				<fieldset>
+					<label for="loginUsername">Username</label>
+					<input id="loginUsername" type="text" name="username" placeholder="Username" align="right">
+				</fieldset>
+				<fieldset>
+					<label for="loginPassword">Password</label>
+					<input type="password" name="password" placeholder="Password" align="right">
+				</fieldset>
+				<input id="login-submit" type="submit">
+			</div>
+			<br>
+		</form>
+	</div>
 </div>
 
 <div id="header">
 	<div id="headerLogin" style="float: right">
 		<button id="loginButton">LOG IN</button>
-    <button id="signUpButton" onclick="signUp()">SIGN UP</button>
+		<button id="signUpButton" onclick="signUp()">SIGN UP</button>
 	</div>
 
 	<ul class="horizontal" id="headerNav">
-		<li class="gamr"><a href="index.php">GAMR</a></li>
-		<li><a href="about.php">About</a></li>
-		<li><a href="find.php">Find</a></li>
-		<li><a href="host.php">Host</a></li>
-		<li><a href="profile.php">Profile</a></li>
+		<li class="gamr"><a href="../index.php">GAMR</a></li>
+		<li><a href="/about">About</a></li>
+		<li><a href="/find">Find</a></li>
+		<li><a href="/host">Host</a></li>
+		<li><a href="/profile">Profile</a></li>
 	</ul>
 </div>

@@ -1,9 +1,9 @@
 function signUp() {
-  window.location.replace('register.php');
+  window.location.replace('/register/');
 }
 
 function donateButton(){
-  window.location.replace('donate.php')
+  window.location.replace('/donate/')
 }
 
 $(document).ready(function()

@@ -105,7 +105,6 @@ ol.horizontal li,ul.horizontal li {
 #headerLogin button {
 	background-color:#FF7D39;
 	font-family:'Raleway',sans-serif;
-	display:inline-block;
 	border:none;
 	border-bottom-left-radius: 7px;
 	border-bottom-right-radius: 7px;
@@ -132,7 +131,6 @@ ol.horizontal li,ul.horizontal li {
 	color:white;
 	font-size: small;
 	text-decoration:none
-	margin:0;
 	text-decoration:none;
 	font-weight: bold;
 }
@@ -155,48 +153,12 @@ ol.horizontal li,ul.horizontal li {
 }
 
 #headerLoginBox {
-	background-color:white;
 	width: 100%;
 	height:85px;
 	display:none;
-	position: relative;
 	top: 0px
 }
 
-#headerLoginDialog form {
- 	position: relative;
-	top: 4%;
-	height: 100%;
-	width: 90%;
-	left: 2.5%
-}
-
-#headerLoginDialog form input {
-	width: 100%
-}
-
-#headerLoginDialog form input[type="submit"] {
-	width: 5em;
-	float: right;
-	background:#FF7D39;
-	display: inline-block;
-	border:none;
-	border-radius: 7px;
-	cursor: pointer;
-	color:white;
-	padding:5px 10px;
-	margin:0;
-	font-weight:bold;
-}
-
-#headerLoginDialog form input[type="submit"]:hover {
-	-webkit-transition: background .3s ease-out;
-	-moz-transition: background .3s ease-out;
-	-o-transition: background .3s ease-out;
-	transition: background .3s ease-out;
-	background-color:white;
-	color:#FF7D39;
-}
 
 #title {
 	display: block;
@@ -245,21 +207,29 @@ blockquote:before {
 	width: 100%;
 }
 
+#loginForm fieldset {
+	border:none;
+	padding: 3px 0px;
+}
+
 #loginForm {
-	width:20%;
-	min-width:240px;
-	margin: auto;
+	width:25%;
+	min-width:300px;
+	max-width:400px;
+	margin:auto;
 	color:white;
+	padding:7px 0px
 }
 
 #loginForm form input {
-	float:right;
+	float: right;
+	clear: both
 }
 
 #login-submit {
 	background-color:white;
 	font-family:'Raleway',sans-serif;
-	display:inline-block;
+	display:below;
 	border:none;
 	cursor:pointer;
 	color:#FF7D39;
@@ -268,7 +238,6 @@ blockquote:before {
 	border-radius:5px;
 	text-decoration:none;
 	font-weight: bold;
-	margin:0;
 }
 
 #login-submit:hover {
