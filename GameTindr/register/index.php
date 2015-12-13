@@ -27,8 +27,8 @@
 		elseif ($confirmemail!=$email) {
 			echo('Emails do not match.');
 		}
-		elseif (strlen($password)>32||strlen($password)<6) {
-			echo('Password must be between 6 and 32 characters.');
+		elseif (strlen($password)<6) {
+			echo('Password must be above 6 characters.');
 		}
 		elseif (strlen($username)>65||strlen($username)<3) {
 			echo('Username must be between 3 and 65 characters.');
