@@ -1,5 +1,5 @@
 function signUp() {
-  window.location.replace('/register/');
+  window.location.replace('../register/');
 }
 
 function donateButton(){

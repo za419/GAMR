@@ -14,7 +14,7 @@ if ($username&&$password) {
       $dbusername=$row['Username'];
       $dbpassword=$row['Password'];
     }
-    if ($username==$dbusername&&$password==$dbpassword) {
+    if ($username==$dbusername&&md5($password)==$dbpassword) {
       $_SESSION['username']=$dbusername;
       header("Location:index.php");
     }else{

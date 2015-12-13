@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <?php include("include/common.html"); ?>
+  <?php include("../include/common.html"); ?>
   <link rel="stylesheet" type="text/css" href="../styles/register.css">
   <meta name="apple-mobile-web-app-title" content="Register for GAMR">
   <meta name="og:title" content="Register for GAMR">
@@ -15,7 +15,7 @@
     We'll just need a little bit of information from you to optimize your experience.
   </p>
   <br>
-  <form id="registerForm">
+  <form id="registerForm" action="../register.php" method="POST">
     <div>
       <label for="username">Username</label>
       <input type="text" id="username" name="username" placeholder="Username"/><br>
