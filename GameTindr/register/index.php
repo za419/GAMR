@@ -30,8 +30,8 @@
 		elseif (strlen($password)<6) {
 			echo('Password must be above 6 characters.');
 		}
-		elseif (strlen($username)>65||strlen($username)<3) {
-			echo('Username must be between 3 and 65 characters.');
+		elseif (strlen($username)>80||strlen($username)<3) {
+			echo('Username must be between 3 and 80 characters.');
 		}
 		else {
 			$password=md5($password);
