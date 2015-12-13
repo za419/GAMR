@@ -1,2 +1,8 @@
 Redirect /include/* /index.php
 Redirect /index.php /about
+Redirect about.php /about
+Redirect donate.php /donate
+Redirect find.php /find
+Redirect host.php /host
+Redirect profile.php /profile
+Redirect register.php /register
