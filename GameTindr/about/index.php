@@ -7,7 +7,7 @@
     <title>About GAMR</title>
   </head>
   <body>
-    <?php include("../include/header.html"); ?>
+    <?php include("../include/header.php"); ?>
     <h1 id="title">About <span class="gamr">GAMR</span></h1>
 		<p class="info">
 			<span class="gamr">GAMR</span> was written as a team project

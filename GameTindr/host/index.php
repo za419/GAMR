@@ -8,7 +8,7 @@
 	<title>Host A Game</title>
 </head>
 <body>
-	<?php include("../include/header.html"); ?>
+	<?php include("../include/header.php"); ?>
 		<form id="new-game">
 			<input type="text" placeholder="Which game are you playing?">
 			<input type="number" placeholder="How many people do you want?">

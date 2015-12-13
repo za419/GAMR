@@ -8,7 +8,7 @@
     <title>GAMR Profile</title>
   </head>
   <body>
-      <?php include("../include/header.html"); ?>
+      <?php include("../include/header.php"); ?>
       <div id="userProfile">
         <img id="userPhoto" src="../images/example-profile.png" width="200px" height="200px">
           &nbsp;

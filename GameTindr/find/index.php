@@ -8,7 +8,7 @@
 	<title>Find A Game</title>
 </head>
 <body>
-	<?php include("../include/header.html"); ?>
+	<?php include("../include/header.php"); ?>
 	<p id="no-game">
 		We apologize, there is no game available for you to join.<br>
 		Would you like to <a href="host.php">host</a> one?

@@ -1,6 +1,6 @@
 <div id="headerLoginBox">
 	<div id="loginForm">
-		<form>
+		<form action="../login.php" method="POST">
 			<div>
 				<fieldset>
 					<label for="loginUsername">Username</label>
@@ -19,8 +19,25 @@
 
 <div id="header">
 	<div id="headerLogin" style="float: right">
-		<button id="loginButton">LOG IN</button>
-		<button id="signUpButton" onclick="signUp()">SIGN UP</button>
+		<?php
+			session_start();
+			if(isset($_SESSION['username'])==true){
+				$username=$_SESSION['username'];
+				echo('<button id="helloButton">
+								HELLO '.strtoupper($username).'!
+							</button>
+							<button id="logOutButton" onclick="logOut()">
+								LOG OUT
+							</button>');
+			}else{
+				echo('<button id="loginButton">
+								LOG IN
+							</button>
+							<button id="signUpButton" onclick="signUp()">
+								SIGN UP
+							</button>');
+			}
+		?>
 	</div>
 
 	<ul class="horizontal" id="headerNav">
