@@ -5,6 +5,10 @@
   <link rel="stylesheet" type="text/css" href="../styles/register.css">
   <meta name="apple-mobile-web-app-title" content="Register for GAMR">
   <meta name="og:title" content="Register for GAMR">
+  <?php
+	if (!isset($_POST['confirm-password']))
+		echo "<script src='../scripts/register-validate.js'></script>";
+  ?>
   <title>Register for GAMR</title>
 </head>
 <body>
@@ -43,39 +47,45 @@
 		}
 	}
 	else {
-		echo <<<EOT <p class="info" style="text-align:center !important">
+		echo <<<'EOT'
+			<p class="info" style="text-align:center !important">
 				We'll just need a little bit of information from you to optimize your experience.
 			</p>
 			<br>
 			<form id="registerForm" action="./" method="POST">
 				<div>
-				<label for="username">Username</label>
-				<input type="text" id="username" name="username" placeholder="Username"/><br>
+					<label for="username">Username</label>
+					<input type="text" id="username" name="username" placeholder="Username" oninput="checkUsername()"/><br>
+					<p class="info" style="display:none" id="username-error"></p>
 				</div>
 				<div>
-				<label for="password">Password</label>
-				<input type="password" id="password" name="password" placeholder="Password"/><br>
+					<label for="password">Password</label>
+					<input type="password" id="password" name="password" placeholder="Password" oninput="checkPassword()"/><br>
+					<p class="info" style="display:none" id="password-error"></p>
 				</div>
 				<div>
-				<label for="confirm-password">Confirm Password</label>
-				<input type="password" id="confirm-password" name="confirm-password"
-				placeholder="Confirm Password"/><br>
+					<label for="confirm-password">Confirm Password</label>
+					<input type="password" id="confirm-password" name="confirm-password"
+					placeholder="Confirm Password" oninput="checkPassword()"/><br>
+					<p class="info" style="display:none" id="confirm-password-error"></p>
 				</div>
 				<div>
-				<label for="email">Email</label>
-				<input type="text" id="email" name="email" placeholder="Email"><br>
+					<label for="email">Email</label>
+					<input type="text" id="email" name="email" placeholder="Email" oninput="checkEmail()"><br>
+					<p class="info" style="display:none" id="email-error"></p>
 				</div>
 				<div>
-				<label for="confirm-email">Confirm Email</label>
-				<input type="text" id="confirm-email" name="confirm-email"
-				placeholder="Confirm Email"/><br><br>
+					<label for="confirm-email">Confirm Email</label>
+					<input type="text" id="confirm-email" name="confirm-email"
+					placeholder="Confirm Email" oninput="checkEmail()"/><br>
+					<p class="info" style="display:none" id="confirm-email-error"></p><br>
 				<div>
-					<input type="submit" id="submit">
+					<input type="submit" id="submit" disabled>
 				</div>
 				</div>
 			</form>
 EOT;
 	}
-  <?php include("../include/footer.html"); ?>
+  include("../include/footer.html"); ?>
 </body>
 </html>
