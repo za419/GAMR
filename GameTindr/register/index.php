@@ -39,7 +39,7 @@
 			echo('Username must be under 80 characters.');
 		else {
 			$password=password_hash($password, PASSWORD_DEFAULT);
-			if (!password)
+			if (!$password)
 				die("Invalid password");
 			$connection=mysqli_connect("localhost","root","","GAMR") or die("Could not connect to the server.");
 			$query=mysqli_stmt_init($connection);
