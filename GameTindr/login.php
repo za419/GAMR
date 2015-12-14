@@ -15,7 +15,7 @@ if ($username && $password) {
 	if ($numrows!=0) {
 		$dbpassword="";
 		$dbuid=0;
-		mysqli_stmt_bind_result($query, $dbpassword,$dbuid);
+		mysqli_stmt_bind_result($query, $dbpassword, $dbuid);
 		mysqli_stmt_fetch($query);
 		if (password_verify($password, $dbpassword)) { // Login succeeded
 			mysqli_stmt_close($query);
