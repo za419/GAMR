@@ -16,6 +16,7 @@
   <h1 id="title">Thank you for choosing <span class="gamr">GAMR</span></h1>
   <br>
   <?php
+	require("../include/db_config.php");
 	if (isset($_POST['confirm-password'])) {
 		//TODO Add email verification.
 		session_start();
@@ -41,7 +42,7 @@
 			$password=password_hash($password, PASSWORD_DEFAULT);
 			if (!$password)
 				die("Invalid password");
-			$connection=mysqli_connect("localhost","root","","GAMR") or die("Could not connect to the server.");
+			$connection=mysqli_connect($CONFIG["host"],$CONFIG["username"],$CONFIG["password"],$CONFIG["dbname"]) or die("Could not connect to the server.");
 			$query=mysqli_stmt_init($connection);
 			mysqli_stmt_prepare($query,'INSERT INTO users (username, password, email) VALUES ("?","?","?")');
 			mysqli_stmt_bind_param($query, 'sss', $username, $password, $email);

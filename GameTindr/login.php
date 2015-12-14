@@ -1,12 +1,12 @@
 <?php
-
+require("include/db_config.php");
 session_start();
 $username = $_POST['username'];
 $password = $_POST['password'];
 
 
 if ($username && $password) {
-	$connection=mysqli_connect("localhost","root","","GAMR") or die("Could not connect to the server.");
+	$connection=mysqli_connect($CONFIG["host"],$CONFIG["username"],$CONFIG["password"],$CONFIG["dbname"]) or die("Could not connect to the server.");
 	$query=mysqli_stmt_init($connection);
 	mysqli_prepare($query,'SELECT password FROM users where username=?');
 	mysqli_stmt_bind_param($query, 's', $username);
