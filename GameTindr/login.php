@@ -7,8 +7,7 @@ $password = $_POST['password'];
 
 if ($username && $password) {
 	$connection=mysqli_connect($CONFIG["host"],$CONFIG["username"],$CONFIG["password"],$CONFIG["dbname"]) or die("Could not connect to the server.");
-	$query=mysqli_stmt_init($connection);
-	mysqli_prepare($query,'SELECT password FROM users where username=? or email=?');
+	mysqli_prepare($connection,'SELECT password FROM users where username=? or email=?');
 	mysqli_stmt_bind_param($query, 'ss', $username, $username);
 	mysqli_stmt_execute($query);
 	mysqli_stmt_store_result($query);
@@ -17,9 +16,10 @@ if ($username && $password) {
 		$dbpassword="";
 		mysqli_stmt_bind_result($query, $dbpassword);
 		mysqli_stmt_fetch($query);
-		if (password_verify($password, $dbpassword) {
+		if (password_verify($password, $dbpassword)) {
 			$_SESSION['username']=$username;
 			header("Location:index.php");
+			echo("<script>document.location.replace('index.php')</script>");
 		}
 		else
 			echo("Incorrect username or password.");
@@ -31,6 +31,7 @@ if ($username && $password) {
 	}
 	mysqli_stmt_close($query);
 	mysqli_close($connection);
+}
 else
 	die("Please enter a username and password.");
 ?>
