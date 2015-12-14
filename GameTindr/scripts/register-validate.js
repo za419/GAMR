@@ -7,7 +7,9 @@ function checkUsername()
 	goodUN=false;
 	var username=document.getElementById("username");
 
-	if (username.value!="") {
+	if (username.value.length==0)
+		document.getElementById("username-error").style.display="none";
+	else {
 		var elt=document.getElementById("username-error");
 		if (username.value.length<5) {
 			elt.innerHTML="<span class='alert'>Warning: </span>Short usernames may be more common targets for attack or spam.<br />"+
@@ -33,7 +35,9 @@ function checkPassword()
 	var password=document.getElementById("password");
 	var confirm=document.getElementById("confirm-password");
 
-	if (password.value!="") {
+	if (password.value.length==0)
+		document.getElementById("username-error").style.display="none";
+	else {
 		if (password.value.length<6) {
 			var elt=document.getElementById("password-error");
 			elt.innerHTML="Password must be at least 6 characters.";
@@ -42,7 +46,9 @@ function checkPassword()
 		else
 			document.getElementById("password-error").style.display="none";
 
-		if (confirm.value!="") {
+		if (confirm.value.length==0)
+			document.getElementById("confirm-password-error").style.display="none";
+		else {
 			var elt=document.getElementById("confirm-password-error");
 			if (confirm.value.length<6) {
 				elt.innerHTML="Password too short.";
@@ -66,10 +72,15 @@ function checkEmail()
 	var email=document.getElementById("email");
 	var confirm=document.getElementById("confirm-email");
 
-	if (email.value!="") {
-		if (/.+@.+\..+/i.test(email.value)) { // Use a regexp to make sure the email has an @ and a . (dot).
+	if (email.value=="")
+		document.getElementById("email-error").style.display="none";
+	else {
+		if (/.+@.+\..+/.test(email.value)) { // Use a regexp to make sure the email has an @ and a . (dot).
+			document.getElementById("email-error").style.display="none";
 			var elt=document.getElementById("confirm-email-error"); // Email-validation will check the rest, this just makes sure it looks remotely like an email
-			if (confirm.value!==email.value) {
+			if (confirm.value.legnth==0)
+				elt.style.display="none";
+			else if (confirm.value!==email.value) {
 				elt.innerHTML="Emails do not match.";
 				elt.style.display="block";
 			}
