@@ -17,7 +17,7 @@
   <br>
   <?php
 	if (isset($_POST['confirm-password'])) {
-		//TODO Add email checking.
+		//TODO Add email verification.
 		session_start();
 		$username=$_POST['username'];
 		$password=$_POST['password'];
@@ -36,7 +36,9 @@
 		elseif (strlen($username)>80)
 			echo('Username must be under 80 characters.');
 		else {
-			$password=md5($password);
+			$password=password_hash($password, PASSWORD_DEFAULT);
+			if (!password)
+				die("Invalid password");
 			$connection=mysqli_connect("localhost","root","","users") or die("Could not connect to the server.");
 			$query=mysqli_query($connection,"
 				INSERT INTO users VALUES ('','$username','$password','$email')
