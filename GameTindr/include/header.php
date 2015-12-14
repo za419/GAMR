@@ -4,11 +4,11 @@
 			<div>
 				<fieldset>
 					<label for="loginUsername">Username</label>
-					<input id="loginUsername" type="text" name="username" placeholder="Username" align="right">
+					<input id="loginUsername" type="text" name="username" placeholder="Username" align="right" oninput="checkLoginUsername()">
 				</fieldset>
 				<fieldset>
 					<label for="loginPassword">Password</label>
-					<input type="password" name="password" placeholder="Password" align="right">
+					<input id="loginPassword" type="password" name="password" placeholder="Password" align="right" oninput="checkLoginPassword()">
 				</fieldset>
 				<input id="login-submit" type="submit">
 			</div>
