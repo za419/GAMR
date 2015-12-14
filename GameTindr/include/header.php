@@ -31,6 +31,8 @@
 				$username="";
 				mysqli_stmt_bind_result($query, $username);
 				mysqli_stmt_fetch($query);
+				mysqli_stmt_close($query);
+				mysqli_close($connection);
 
 				echo('<button id="helloButton">
 								HELLO '.strtoupper($username).'!
