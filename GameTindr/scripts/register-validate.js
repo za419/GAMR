@@ -14,6 +14,7 @@ function checkUsername()
 		if (username.value.length<5) {
 			elt.innerHTML="<span class='alert'>Warning: </span>Short usernames may be more common targets for attack or spam.<br />"+
 				"You may want to select a longer username.";
+			goodUN=true;
 			elt.style.display="block";
 		}
 		else if (username.value.length>80) {
@@ -81,7 +82,7 @@ function checkEmail()
 		else if (/.+@.+\..+/.test(email.value)) { // Use a regexp to make sure the email has an @ and a . (dot).
 			document.getElementById("email-error").style.display="none";
 			var elt=document.getElementById("confirm-email-error"); // Email-validation will check the rest, this just makes sure it looks remotely like an email
-			if (confirm.value.legnth==0)
+			if (confirm.value.length==0)
 				elt.style.display="none";
 			else if (confirm.value!==email.value) {
 				elt.innerHTML="Emails do not match.";

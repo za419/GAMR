@@ -248,3 +248,7 @@ blockquote:before {
 	background-color:#8539B1;
 	color:white;
 }
+
+input, select, textarea {
+	font-family: 'Raleway', sans-serif
+}

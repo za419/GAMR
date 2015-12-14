@@ -8,7 +8,7 @@
     <title>Donate!</title>
   </head>
   <body>
-      <?php include(../"include/header.php"); ?>
+      <?php include("../include/header.php"); ?>
       <div style="width:5%;margin-top:10px !important;margin:auto">
         <p class='info'>
           <a href="http://www.paypal.com">Donate</a>

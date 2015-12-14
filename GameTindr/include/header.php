@@ -20,7 +20,9 @@
 <div id="header">
 	<div id="headerLogin" style="float: right">
 		<?php
-			session_start();
+			if(!isset($_SESSION)){
+				session_start();
+			}
 			if(isset($_SESSION['username'])==true){
 				$username=$_SESSION['username'];
 				echo('<button id="helloButton">
