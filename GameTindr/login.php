@@ -7,7 +7,7 @@ $password = $_POST['password'];
 
 if ($username && $password) {
 	$connection=mysqli_connect($CONFIG["host"],$CONFIG["username"],$CONFIG["password"],$CONFIG["dbname"]) or die("Could not connect to the server.");
-	mysqli_prepare($connection,'SELECT password FROM users where username=? or email=?');
+	$query=mysqli_prepare($connection,'SELECT password FROM users where username=? or email=?');
 	mysqli_stmt_bind_param($query, 'ss', $username, $username);
 	mysqli_stmt_execute($query);
 	mysqli_stmt_store_result($query);
