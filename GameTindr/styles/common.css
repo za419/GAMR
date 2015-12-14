@@ -182,6 +182,11 @@ ol.horizontal li,ul.horizontal li {
 	width: 90%;
 }
 
+.alert {
+	color: red;
+	font-weight: bold
+}
+
 .teammate-name {
 	font-weight: bold;
 	color: #4e2a84

@@ -83,6 +83,7 @@ function checkEmail()
 			var elt=document.getElementById("confirm-email-error"); // Email-validation will check the rest, this just makes sure it looks remotely like an email
 			if (confirm.value.legnth==0)
 				elt.style.display="none";
+			// TODO check that email is not already in use
 			else if (confirm.value!==email.value) {
 				elt.innerHTML="Emails do not match.";
 				elt.style.display="block";
