@@ -25,18 +25,16 @@
 		$email=$_POST['email'];
 		$confirmemail=$_POST['confirm-email'];
 
-		if ($confirmpassword!=$password) {
+		if ($confirmpassword!=$password)
 			echo('Passwords do not match.');
-		}
-		elseif ($confirmemail!=$email) {
+		elseif (preg_match('/.+@.+\..+/', $email)==0)
+			echo('Email is not properly formed');
+		elseif ($confirmemail!=$email)
 			echo('Emails do not match.');
-		}
-		elseif (strlen($password)<6) {
+		elseif (strlen($password)<6)
 			echo('Password must be above 6 characters.');
-		}
-		elseif (strlen($username)>80) {
+		elseif (strlen($username)>80)
 			echo('Username must be under 80 characters.');
-		}
 		else {
 			$password=md5($password);
 			$connection=mysqli_connect("localhost","root","","users") or die("Could not connect to the server.");
