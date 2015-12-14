@@ -27,6 +27,8 @@
 
 		if ($confirmpassword!=$password)
 			echo('Passwords do not match.');
+		elseif (strlen($email)>1000)
+			echo('Email must be under 1000 characters.');
 		elseif (preg_match('/.+@.+\..+/', $email)==0)
 			echo('Email is not properly formed');
 		elseif ($confirmemail!=$email)

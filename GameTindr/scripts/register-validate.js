@@ -76,7 +76,9 @@ function checkEmail()
 	if (email.value=="")
 		document.getElementById("email-error").style.display="none";
 	else {
-		if (/.+@.+\..+/.test(email.value)) { // Use a regexp to make sure the email has an @ and a . (dot).
+		if (email.value.length>1000)
+			document.getElementById("email-error").innerHTML="Email must be under 1000 characters.";
+		else if (/.+@.+\..+/.test(email.value)) { // Use a regexp to make sure the email has an @ and a . (dot).
 			document.getElementById("email-error").style.display="none";
 			var elt=document.getElementById("confirm-email-error"); // Email-validation will check the rest, this just makes sure it looks remotely like an email
 			if (confirm.value.legnth==0)
