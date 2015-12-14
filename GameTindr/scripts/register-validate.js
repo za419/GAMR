@@ -61,6 +61,7 @@ function checkPassword()
 			else {
 				elt.style.display="none";
 				goodPW=true;
+				checkSubmit();
 			}
 		}
 	}
@@ -87,6 +88,7 @@ function checkEmail()
 			else {
 				elt.style.display="none";
 				goodEM=true;
+				checkSubmit();
 			}
 		}
 		else {
