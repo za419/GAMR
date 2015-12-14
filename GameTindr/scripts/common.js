@@ -2,6 +2,10 @@ function signUp() {
   window.location.replace('../register/');
 }
 
+function toProfile() {
+  window.location.replace('../profile/');
+}
+
 function donateButton(){
   window.location.replace('/donate/')
 }

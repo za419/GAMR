@@ -23,9 +23,9 @@
 			if(!isset($_SESSION)){
 				session_start();
 			}
-			if(isset($_SESSION['username'])==true){
+			if(isset($_SESSION['username'])){
 				$username=$_SESSION['username'];
-				echo('<button id="helloButton">
+				echo('<button id="helloButton" onclick="toProfile()">
 								HELLO '.strtoupper($username).'!
 							</button>
 							<button id="logOutButton" onclick="logOut()">
@@ -47,6 +47,10 @@
 		<li><a href="/about">About</a></li>
 		<li><a href="/find">Find</a></li>
 		<li><a href="/host">Host</a></li>
-		<li><a href="/profile">Profile</a></li>
+		<?php
+			if(isset($_SESSION['username'])){
+				echo("<li><a href='/profile'>Profile</a></li>");
+			}
+		?>
 	</ul>
 </div>
