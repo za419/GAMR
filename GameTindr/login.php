@@ -6,25 +6,31 @@ $password = $_POST['password'];
 
 
 if ($username && $password) {
-  $connection=mysqli_connect("localhost","root","","users") or die("Error: Could not connect to server.");
-  $query=mysqli_query($connection, "SELECT * FROM users WHERE username='$username'");
-  $numrows=$query->num_rows;
-  if ($numrows!=0) {
-    while ($row=mysqli_fetch_assoc($query)) {
-      $dbusername=$row['Username'];
-      $dbpassword=$row['Password'];
-    }
-    if ($username==$dbusername && password_verify($password, $dbpassword) {
-      $_SESSION['username']=$dbusername;
-      header("Location:index.php");
-    }else{
-      echo("Incorrect username or password.");
-    }
-  }else{
-    die("Incorrect username or password.");
-  }
-}else{
-  die("Please enter a username and password.");
-}
-
- ?>
+	$connection=mysqli_connect("localhost","root","","GAMR") or die("Could not connect to the server.");
+	$query=mysqli_stmt_init($connection);
+	mysqli_prepare($query,'SELECT password FROM users where username=?');
+	mysqli_stmt_bind_param($query, 's', $username);
+	mysqli_stmt_execute($query);
+	mysqli_stmt_store_result($query);
+	$numrows=mysqli_stmt_num_rows($query);
+	if ($numrows!=0) {
+		$dbpassword="";
+		mysqli_stmt_bind_result($query, $dbpassword);
+		mysqli_stmt_fetch($query);
+		if (password_verify($password, $dbpassword) {
+			$_SESSION['username']=$username;
+			header("Location:index.php");
+		}
+		else
+			echo("Incorrect username or password.");
+	}
+	else {
+		mysqli_stmt_close($query);
+		mysqli_close($connection);
+		die("Incorrect username or password.");
+	}
+	mysqli_stmt_close($query);
+	mysqli_close($connection);
+else
+	die("Please enter a username and password.");
+?>

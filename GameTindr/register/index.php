@@ -41,10 +41,13 @@
 			$password=password_hash($password, PASSWORD_DEFAULT);
 			if (!password)
 				die("Invalid password");
-			$connection=mysqli_connect("localhost","root","","users") or die("Could not connect to the server.");
-			$query=mysqli_query($connection,"
-				INSERT INTO users VALUES ('','$username','$password','$email')
-			");
+			$connection=mysqli_connect("localhost","root","","GAMR") or die("Could not connect to the server.");
+			$query=mysqli_stmt_init($connection);
+			mysqli_stmt_prepare($query,'INSERT INTO users (username, password, email) VALUES ("?","?","?")');
+			mysqli_stmt_bind_param($query, 'sss', $username, $password, $email);
+			mysqli_stmt_execute($query);
+			mysqli_stmt_close($query);
+			mysqli_close($connection);
 			header('Location:/about/');
 		}
 	}
