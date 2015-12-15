@@ -25,7 +25,7 @@
 			if(isset($_SESSION['loginID'])){
 
 				$connection=mysqli_connect($CONFIG["host"],$CONFIG["username"],$CONFIG["password"],$CONFIG["dbname"]); // If database connection fails, do nothing. We don't want to leave a hanging session record.
-				$query=mysqli_prepare($connection, "SELECT username FROM users WHERE UID in (SELECT UID FROM sessions WHERE session=?");
+				$query=mysqli_prepare($connection, 'SELECT username FROM users WHERE UID in (SELECT UID FROM sessions WHERE session=?)');
 				mysqli_stmt_bind_param($query, "i", $_SESSION['loginID']);
 				mysqli_stmt_execute($query);
 				mysqli_stmt_store_result($query);
@@ -36,7 +36,7 @@
 				mysqli_close($connection);
 
 				echo('<button id="helloButton">
-								HELLO '.strtoupper($username).'!
+								HELLO, '.strtoupper($username).'!
 							</button>
 							<button id="logOutButton" onclick="logOut()">
 								LOG OUT

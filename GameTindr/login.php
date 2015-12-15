@@ -19,16 +19,12 @@ if ($username && $password) {
 		mysqli_stmt_fetch($query);
 		if (password_verify($password, $dbpassword)) { // Login succeeded
 			mysqli_stmt_close($query);
-			$query=mysqli_stmt_prepare($connection, 'INSERT INTO sessions (UID) VALUES (?)'); // Add a new session record
+			$query=mysqli_prepare($connection, 'INSERT INTO sessions (UID) VALUES (?)'); // Add a new session record
 			mysqli_stmt_bind_param($query, 'i', $dbuid);
 			mysqli_stmt_execute($query);
-			mysqli_stmt_close($query);
 
-			$query=mysqli_stmt_prepare($connection, 'SELECT LAST_INSERT_ID()'); // Get the id of that session
-			mysqli_stmt_execute($query);
-			mysqli_stmt_store_result($query);
-			mysqli_stmt_bind_result($query, $dbuid);
-			mysqli_stmt_fetch($query);
+			$result=mysqli_query($connection, 'SELECT LAST_INSERT_ID()'); // Get the id of that session
+			$dbuid=mysqli_fetch_row($result)[0];
 
 			$_SESSION["loginID"]=$dbuid;
 			if (password_needs_rehash($dbpassword, PASSWORD_DEFAULT)) { // If the stored hash needs updating,
