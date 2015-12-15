@@ -4,11 +4,11 @@
 			<div>
 				<fieldset>
 					<label for="loginUsername">Username</label>
-					<input id="loginUsername" type="text" name="username" placeholder="Username" align="right">
+					<input id="loginUsername" type="text" name="username" placeholder="Username" align="right" oninput="checkLoginUsername()">
 				</fieldset>
 				<fieldset>
 					<label for="loginPassword">Password</label>
-					<input type="password" name="password" placeholder="Password" align="right">
+					<input id="loginPassword" type="password" name="password" placeholder="Password" align="right" oninput="checkLoginPassword()">
 				</fieldset>
 				<input id="login-submit" type="submit">
 			</div>
@@ -20,9 +20,12 @@
 <div id="header">
 	<div id="headerLogin" style="float: right">
 		<?php
+<<<<<<< HEAD
 			require_once("db_config.php");
-			session_start();
-			if(isset($_SESSION['loginID'])){
+			if(!isset($_SESSION)) {
+				session_start();
+			}
+			if(isset($_SESSION['loginID'])) {
 
 				$connection=mysqli_connect($CONFIG["host"],$CONFIG["username"],$CONFIG["password"],$CONFIG["dbname"]); // If database connection fails, do nothing. We don't want to leave a hanging session record.
 				$query=mysqli_prepare($connection, 'SELECT username FROM users WHERE UID in (SELECT UID FROM sessions WHERE session=?)');
@@ -35,13 +38,14 @@
 				mysqli_stmt_close($query);
 				mysqli_close($connection);
 
-				echo('<button id="helloButton">
+				echo('<button id="helloButton" onclick="toProfile">
 								HELLO, '.strtoupper($username).'!
 							</button>
 							<button id="logOutButton" onclick="logOut()">
 								LOG OUT
 							</button>');
-			}else{
+			}
+			else {
 				echo('<button id="loginButton">
 								LOG IN
 							</button>
@@ -57,6 +61,10 @@
 		<li><a href="/about">About</a></li>
 		<li><a href="/find">Find</a></li>
 		<li><a href="/host">Host</a></li>
-		<li><a href="/profile">Profile</a></li>
+		<?php
+			if(isset($_SESSION['loginID'])){
+				echo("<li><a href='/profile'>Profile</a></li>");
+			}
+		?>
 	</ul>
 </div>

@@ -19,20 +19,19 @@
 	require("../include/db_config.php");
 	if (isset($_POST['confirm-password'])) {
 		//TODO Add email verification.
-		session_start();
 		$username=$_POST['username'];
 		$password=$_POST['password'];
 		$confirmpassword=$_POST['confirm-password'];
 		$email=$_POST['email'];
 		$confirmemail=$_POST['confirm-email'];
 
-		if ($confirmpassword!=$password)
+		if ($confirmpassword!==$password)
 			echo('Passwords do not match.');
-		elseif (strlen($email)>1000)
-			echo('Email must be under 1000 characters.');
+		elseif (strlen($email)>255)
+			echo('Email must be under 255 characters.');
 		elseif (preg_match('/.+@.+\..+/', $email)==0)
 			echo('Email is not properly formed');
-		elseif ($confirmemail!=$email)
+		elseif ($confirmemail!==$email)
 			echo('Emails do not match.');
 		elseif (strlen($password)<6)
 			echo('Password must be above 6 characters.');
