@@ -234,7 +234,7 @@ blockquote:before {
 #login-submit {
 	background-color:white;
 	font-family:'Raleway',sans-serif;
-	display:below;
+	display:none;
 	border:none;
 	cursor:pointer;
 	color:#FF7D39;
@@ -252,4 +252,8 @@ blockquote:before {
 	transition: background .3s ease-out;
 	background-color:#8539B1;
 	color:white;
+}
+
+input, select, textarea {
+	font-family: 'Raleway', sans-serif
 }

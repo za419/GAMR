@@ -1,4 +1,20 @@
-<!DOCTYPE html>
+<?php
+  require("../include/db_config.php");
+  session_start();
+  $username=$_SESSION['username'];
+  $connection=mysqli_connect($CONFIG["host"],$CONFIG["username"],$CONFIG["password"],$CONFIG["dbname"]) or die("Could not connect to the server.");
+  $query=mysqli_query($connection,"SELECT * FROM users WHERE username='$username'");
+  while($row=mysqli_fetch_array($query)){
+    $username=$row['username'];
+    $email=$row['email'];
+    $fname=$row['firstname'];
+    $lname=$row['lastname'];
+    $about=$row['about'];
+  }
+
+
+
+?>
 <html>
   <head>
     <?php include("../include/common.html"); ?>
@@ -12,14 +28,31 @@
       <div id="userProfile">
         <img id="userPhoto" src="../images/example-profile.png" width="200px" height="200px">
           &nbsp;
-          <ul id="userInfo">
-            <li>Username: <span>Murf</span></p>
-            <li>Email: <span>murphycangelo@gmail.com</span></p>
-            <li>First Name: <span>Murphy</span></p>
-            <li>Last Name: <span>Angelo</span></p>
-            <li>About Me: <span style="white-space:normal !important">My favorite emoji is the ghost emoji.
-            I also like singing, dancing, and trains.</span></li>
-          </ul>
+          <fieldset id="userInfo">
+            <li>Username: <span><?php echo($username);?></span></p>
+            <li>Email: <span><?php echo($email);?></span></p>
+            <li>First Name: <span>
+              <?php if (isset($fname)) {
+                      echo($fname);
+                    } else {
+                      echo("You have not set a first name.");
+                    }?>
+            </span></p>
+            <li>Last Name: <span>
+              <?php if (isset($lname)) {
+                      echo($lname);
+                    } else {
+                      echo("You have not set a last name.");
+                    }?>
+            </span></p>
+            <li>About Me: <span style="white-space:normal !important">
+              <?php if (isset($about)) {
+                      echo($about);
+                    } else {
+                      echo("You have not set an about me.");
+                    }?>
+            </span></li>
+          </fields>
       </div>
       <?php include("../include/footer.html"); ?>
   </body>
