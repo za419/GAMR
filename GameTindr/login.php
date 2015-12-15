@@ -1,5 +1,5 @@
 <?php
-require("include/db_config.php");
+require_once("include/db_config.php");
 session_start();
 $username = $_POST['username'];
 $password = $_POST['password'];

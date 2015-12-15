@@ -20,6 +20,7 @@
 <div id="header">
 	<div id="headerLogin" style="float: right">
 		<?php
+			require_once("db_config.php");
 			session_start();
 			if(isset($_SESSION['loginID'])){
 
