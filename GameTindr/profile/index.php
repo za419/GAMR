@@ -1,9 +1,9 @@
 <?php
   require("../include/db_config.php");
   session_start();
-  $username=$_SESSION['username'];
-  $connection=mysqli_connect($CONFIG["host"],$CONFIG["username"],$CONFIG["password"],$CONFIG["dbname"]) or die("Could not connect to the server.");
-  $query=mysqli_query($connection,"SELECT * FROM users WHERE username='$username'");
+  $uid=$_SESSION['loginID'];
+  $connection=mysqli_connect($CONFIG["host"],$CONFIG["username"],$CONFIG["password"],$CONFIG['dbname']) or die("Could not connect to the server.");
+  $query=mysqli_query($connection,"SELECT * FROM users WHERE UID='$uid'");
   while($row=mysqli_fetch_array($query)){
     $username=$row['username'];
     $email=$row['email'];
