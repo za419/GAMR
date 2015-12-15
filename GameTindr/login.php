@@ -1,5 +1,5 @@
 <?php
-require("include/db_config.php");
+require_once("include/db_config.php");
 session_start();
 $username = $_POST['username'];
 $password = $_POST['password'];
@@ -7,18 +7,26 @@ $password = $_POST['password'];
 
 if ($username && $password) {
 	$connection=mysqli_connect($CONFIG["host"],$CONFIG["username"],$CONFIG["password"],$CONFIG["dbname"]) or die("Could not connect to the server.");
-	$query=mysqli_prepare($connection,'SELECT password,username FROM users where username=? or email=?'); // Allow login using both username and email.
+	$query=mysqli_prepare($connection,'SELECT password,UID FROM users where username=? or email=?'); // Allow login using both username and email.
 	mysqli_stmt_bind_param($query, 'ss', $username, $username);
 	mysqli_stmt_execute($query);
 	mysqli_stmt_store_result($query);
 	$numrows=mysqli_stmt_num_rows($query);
 	if ($numrows!=0) {
 		$dbpassword="";
-		$dbusername="";
-		mysqli_stmt_bind_result($query, $dbpassword,$dbusername);
+		$dbuid=0;
+		mysqli_stmt_bind_result($query, $dbpassword, $dbuid);
 		mysqli_stmt_fetch($query);
 		if (password_verify($password, $dbpassword)) { // Login succeeded
-			$_SESSION['username']=$dbusername; // Set the username to be the one in the database: This is needed if we logged in via an email.
+			mysqli_stmt_close($query);
+			$query=mysqli_prepare($connection, 'INSERT INTO sessions (UID) VALUES (?)'); // Add a new session record
+			mysqli_stmt_bind_param($query, 'i', $dbuid);
+			mysqli_stmt_execute($query);
+
+			$result=mysqli_query($connection, 'SELECT LAST_INSERT_ID()'); // Get the id of that session
+			$dbuid=mysqli_fetch_row($result)[0];
+
+			$_SESSION["loginID"]=$dbuid;
 			if (password_needs_rehash($dbpassword, PASSWORD_DEFAULT)) { // If the stored hash needs updating,
 				$dbpassword=password_hash($password, PASSWORD_DEFAULT);
 				mysqli_stmt_close($query);

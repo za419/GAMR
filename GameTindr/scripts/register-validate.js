@@ -17,7 +17,7 @@ function checkUsername()
 			elt.style.display="block";
 		}
 		else if (username.value.length>80) {
-			elt.innerHTML="Username must be under 80 characters!";
+			elt.innerHTML="Username must be no more than 80 characters!";
 			elt.style.display="block";
 		}
 		// TODO: AJAX confirm that username is not already in use
@@ -76,13 +76,14 @@ function checkEmail()
 	if (email.value=="")
 		document.getElementById("email-error").style.display="none";
 	else {
-		if (email.value.length>1000)
-			document.getElementById("email-error").innerHTML="Email must be under 1000 characters.";
+		if (email.value.length>255)
+			document.getElementById("email-error").innerHTML="Email must be under 256 characters.";
 		else if (/.+@.+\..+/.test(email.value)) { // Use a regexp to make sure the email has an @ and a . (dot).
 			document.getElementById("email-error").style.display="none";
 			var elt=document.getElementById("confirm-email-error"); // Email-validation will check the rest, this just makes sure it looks remotely like an email
 			if (confirm.value.legnth==0)
 				elt.style.display="none";
+			// TODO check that email is not already in use
 			else if (confirm.value!==email.value) {
 				elt.innerHTML="Emails do not match.";
 				elt.style.display="block";
