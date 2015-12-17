@@ -25,6 +25,8 @@
 		$email=$_POST['email'];
 		$confirmemail=$_POST['confirm-email'];
 
+		echo $password.'<br><br>'.$confirmpassword;
+
 		if ($confirmpassword!==$password)
 			echo('Passwords do not match.');
 		elseif (strlen($email)>255)
@@ -33,8 +35,6 @@
 			echo('Email is not properly formed');
 		elseif ($confirmemail!==$email)
 			echo('Emails do not match.');
-		elseif (strlen($password)<6)
-			echo('Password must be above 6 characters.');
 		elseif (strlen($username)>80)
 			echo('Username must be under 80 characters.');
 		else {
@@ -47,7 +47,7 @@
 			mysqli_stmt_execute($query);
 			mysqli_stmt_close($query);
 			mysqli_close($connection);
-			header('Location:/about/');
+			header("Location:../index.php");
 		}
 	}
 	else {
@@ -56,32 +56,32 @@
 				We'll just need a little bit of information from you to optimize your experience.
 			</p>
 			<br>
-			<form id="registerForm" action="./" method="POST">
+			<form name="registerForm" id="registerForm" action="./" onsubmit="hashRegisterPassword()" method="POST">
 				<div>
 					<label for="username">Username</label>
-					<input type="text" id="username" name="username" placeholder="Username" oninput="checkUsername()"/><br>
+					<input type="text" id="username" name="username" placeholder="Username" oninput="checkUsername()" required/><br>
 					<p class="info" style="display:none" id="username-error"></p>
 				</div>
 				<div>
 					<label for="password">Password</label>
-					<input type="password" id="password" name="password" placeholder="Password" oninput="checkPassword()"/><br>
+					<input type="password" id="password" name="password" placeholder="Password" oninput="checkPassword()" required/><br>
 					<p class="info" style="display:none" id="password-error"></p>
 				</div>
 				<div>
 					<label for="confirm-password">Confirm Password</label>
 					<input type="password" id="confirm-password" name="confirm-password"
-					placeholder="Confirm Password" oninput="checkPassword()"/><br>
+					placeholder="Confirm Password" oninput="checkPassword()" required/><br>
 					<p class="info" style="display:none" id="confirm-password-error"></p>
 				</div>
 				<div>
 					<label for="email">Email</label>
-					<input type="text" id="email" name="email" placeholder="Email" oninput="checkEmail()"><br>
+					<input type="text" id="email" name="email" placeholder="Email" oninput="checkEmail()" required><br>
 					<p class="info" style="display:none" id="email-error"></p>
 				</div>
 				<div>
 					<label for="confirm-email">Confirm Email</label>
 					<input type="text" id="confirm-email" name="confirm-email"
-					placeholder="Confirm Email" oninput="checkEmail()"/><br>
+					placeholder="Confirm Email" oninput="checkEmail()" required/><br>
 					<p class="info" style="display:none" id="confirm-email-error"></p><br>
 				<div>
 					<input type="submit" id="submit" disabled>

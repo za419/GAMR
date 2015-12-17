@@ -234,7 +234,6 @@ blockquote:before {
 #login-submit {
 	background-color:white;
 	font-family:'Raleway',sans-serif;
-	display:none;
 	border:none;
 	cursor:pointer;
 	color:#FF7D39;
@@ -245,7 +244,7 @@ blockquote:before {
 	font-weight: bold
 }
 
-#login-submit:hover {
+#login-submit:hover:not([disabled]) {
 	-webkit-transition: background .3s ease-out;
 	-moz-transition: background .3s ease-out;
 	-o-transition: background .3s ease-out;
