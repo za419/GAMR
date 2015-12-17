@@ -25,8 +25,6 @@
 		$email=$_POST['email'];
 		$confirmemail=$_POST['confirm-email'];
 
-		echo $password.'<br><br>'.$confirmpassword;
-
 		if ($confirmpassword!==$password)
 			echo('Passwords do not match.');
 		elseif (strlen($email)>255)
