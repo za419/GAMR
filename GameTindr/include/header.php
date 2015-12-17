@@ -3,7 +3,7 @@ if (!isset($_SESSION['loginID']))
 {
 	echo ('<div id="headerLoginBox">
 			<div id="loginForm">
-				<form name="loginForm" action="../login.php" onsubmit="hashLoginPassword()" method="POST">
+				<form name="loginForm" action="/login.php" onsubmit="hashLoginPassword()" method="POST">
 					<div>
 						<fieldset>
 							<label for="loginUsername">Username</label>
@@ -60,7 +60,7 @@ if (!isset($_SESSION['loginID']))
 	</div>
 
 	<ul class="horizontal" id="headerNav">
-		<li class="gamr"><a href="../index.php">GAMR</a></li>
+		<li class="gamr"><a href="/index.php">GAMR</a></li>
 		<li><a href="/about">About</a></li>
 		<li><a href="/find">Find</a></li>
 		<li><a href="/host">Host</a></li>
