@@ -13,8 +13,9 @@
 		<h3 class="centered">We just need a little bit of information from you to set this up.</h2>
 		<br>
 		<form id="new-game">
-			<input type="text" placeholder="Which game are you playing?">
+			<input type="text" placeholder="Which game are you playing?" required>
 			<input type="number" placeholder="How many people do you want?">
+			<input type="text" placeholder="What platform are you playing on?" required>
 			<input type="submit" value="Host this game">
 		</form>
 	<?php include("../include/footer.html"); ?>
