@@ -4,11 +4,11 @@ html, body {
 }
 
 ol.horizontal li,ul.horizontal li {
-	display:inline;
+	display:inline
 }
 
 .gamr * {
-	color: #FF7D39 !important;
+	color: #FF7D39 !important
 }
 
 .gamr {
@@ -27,7 +27,7 @@ ol.horizontal li,ul.horizontal li {
 }
 
 #headerNav li {
-	padding-right: 5%;
+	padding-right: 5%
 }
 
 #headerNav li a {
@@ -36,7 +36,7 @@ ol.horizontal li,ul.horizontal li {
 	text-decoration: none
 }
 
-#headerNav li a:hover {
+#headerNav li a:hover:not([disabled]) {
 	text-decoration: underline
 }
 
@@ -57,7 +57,7 @@ ol.horizontal li,ul.horizontal li {
 	left:0;
 	right:0;
 	background-color: #8539B1;
-	box-shadow: 0px -3px 2px;
+	box-shadow: 0px -3px 2px
 }
 
 #footerText {
@@ -69,7 +69,7 @@ ol.horizontal li,ul.horizontal li {
 	color:white;
 	text-decoration: none
 }
-#footerText a:hover {
+#footerText a:hover:not([disabled]) {
 	text-decoration: underline
 }
 
@@ -86,16 +86,16 @@ ol.horizontal li,ul.horizontal li {
 	text-decoration:none;
 	border-radius:7px;
 	font-size: 20px;
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Quicksand', sans-serif
 }
 
-#donateButton:hover {
+#donateButton:hover:not([disabled]) {
 	-webkit-transition: background .5s ease-out;
 	-moz-transition: background .5s ease-out;
 	-o-transition: background .5s ease-out;
 	transition: background .5s ease-out;
 	color:white;
-	background-color:#FF7D39;
+	background-color:#FF7D39
 }
 
 #headerLogin {
@@ -113,16 +113,16 @@ ol.horizontal li,ul.horizontal li {
 	padding:5px 10px;
 	text-decoration:none;
 	font-weight: bold;
-	margin:0;
+	margin:0
 }
 
-#headerLogin button:hover {
+#headerLogin button:hover:not([disabled]) {
 	-webkit-transition: background .3s ease-out;
 	-moz-transition: background .3s ease-out;
 	-o-transition: background .3s ease-out;
 	transition: background .3s ease-out;
 	background-color:white;
-	color:#FF7D39;
+	color:#FF7D39
 }
 
 
@@ -132,7 +132,7 @@ ol.horizontal li,ul.horizontal li {
 	font-size: small;
 	text-decoration:none
 	text-decoration:none;
-	font-weight: bold;
+	font-weight: bold
 }
 
 #headerLogin button:hover {
@@ -141,7 +141,7 @@ ol.horizontal li,ul.horizontal li {
 	-o-transition: background .3s ease-out;
 	transition: background .3s ease-out;
 	background-color:white;
-	color:#FF7D39;
+	color:#FF7D39
 }
 
 
@@ -165,11 +165,11 @@ ol.horizontal li,ul.horizontal li {
 	margin: auto;
 	font-weight:normal;
 	text-align: center;
-	margin-top: 23px;
+	margin-top: 23px
 }
 
 #title .gamr {
-	font-size: 1em;
+	font-size: 1em
 }
 
 .info {
@@ -179,7 +179,7 @@ ol.horizontal li,ul.horizontal li {
 
 .info blockquote {
 	margin: auto;
-	width: 90%;
+	width: 90%
 }
 
 .alert {
@@ -192,11 +192,16 @@ ol.horizontal li,ul.horizontal li {
 	color: #4e2a84
 }
 
+.centered {
+	text-align:center;
+	margin:auto
+}
+
 blockquote {
   background: #f9f9f9;
   border-left: 10px solid #CCC;
   padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
+  quotes: "\201C""\201D""\2018""\2019"
 }
 blockquote:before {
   color: #CCC;
@@ -204,17 +209,17 @@ blockquote:before {
   font-size: 4em;
   line-height: 0.1em;
   margin-right: 0.25em;
-  vertical-align: -0.4em;
+  vertical-align: -0.4em
 }
 
 #headerLoginBox {
 	background: #FF7D39;
-	width: 100%;
+	width: 100%
 }
 
 #loginForm fieldset {
 	border:none;
-	padding: 3px 0px;
+	padding: 3px 0px
 }
 
 #loginForm {
@@ -242,16 +247,16 @@ blockquote:before {
 	font-size:12px;
 	border-radius:5px;
 	text-decoration:none;
-	font-weight: bold;
+	font-weight: bold
 }
 
-#login-submit:hover {
+#login-submit:hover:not([disabled]) {
 	-webkit-transition: background .3s ease-out;
 	-moz-transition: background .3s ease-out;
 	-o-transition: background .3s ease-out;
 	transition: background .3s ease-out;
 	background-color:#8539B1;
-	color:white;
+	color:white
 }
 
 input, select, textarea {

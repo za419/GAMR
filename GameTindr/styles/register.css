@@ -24,7 +24,7 @@
 
 	-webkit-transform: translateY(100%);
 	-ms-transform: translateY(100%);
-	transform: translateY(100%);
+	transform: translateY(100%)
 }
 
 form input {
@@ -33,14 +33,14 @@ form input {
 
 form div {
 	display: block;
-	margin-bottom: .5em;
+	margin-bottom: .5em
 }
 
 
 #registerForm {
 	width: 30%;
 	margin: auto;
-	min-width:320px;
+	min-width:320px
 }
 
 #submit {
@@ -50,14 +50,14 @@ form div {
 	color:white;
 	padding:5px 10px;
 	text-decoration:none;
-	font-family:'Quicksand',sans-serif;
+	font-family:'Quicksand',sans-serif
 }
 
-#submit:hover {
+#submit:hover:not([disabled]) {
 	-webkit-transition: background .3s ease-out;
 	-moz-transition: background .3s ease-out;
 	-o-transition: background .3s ease-out;
 	transition: background .3s ease-out;
 	background-color:#FF7D39;
-	color:white;
+	color:white
 }

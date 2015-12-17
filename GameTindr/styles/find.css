@@ -7,6 +7,6 @@
 	color:#FF7D39
 }
 
-#no-game a:hover {
+#no-game a:hover:not([disabled]) {
 	text-decoration:underline
 }

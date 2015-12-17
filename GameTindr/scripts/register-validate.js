@@ -109,3 +109,20 @@ function checkSubmit()
 	var elt=document.getElementById("submit");
 	elt.disabled=!(goodUN && goodPW && goodEM);
 }
+
+function hashRegisterPassword()
+{
+	checkUsername();
+	checkPassword();
+	checkEmail();
+	if (!(goodUN && goodPW && goodEM)) // Sanity check
+		return false;
+
+	var pass=document.forms["registerForm"]["password"];
+	var confirm=document.forms["registerForm"]["confirm-password"];
+	var hash=sha3_512(pass.value);
+	if (true) { // We need this, because the browser won't let us change the form outside of a conditional
+		pass.value=hash;
+		confirm.value=hash;
+	}
+}

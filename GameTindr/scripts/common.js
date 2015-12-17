@@ -1,17 +1,17 @@
 function signUp() {
-  window.location.replace('../register/');
+  window.location.replace('/register/');
 }
 
 function toProfile() {
-  window.location.replace('../profile/');
+  window.location.replace('/profile/');
 }
 
-function donateButton(){
+function donateButton() {
   window.location.replace('/donate/')
 }
 
-function logOut(){
-  window.location.replace('../logout.php')
+function logOut() {
+  window.location.replace('/logout.php')
 }
 
 $(document).ready(function()
@@ -26,28 +26,25 @@ $(document).ready(function()
 	});
 });
 
-//Show or hide the login button based on inputs
-var goodLUN=false;
-var goodLPW=false;
+function checkLogin()
+{
+	var user=document.getElementById("loginUsername");
+	var pass=document.getElementById("loginPassword");
+	var elt=document.getElementById("login-submit");
 
-function checkLoginUsername() {
-  var username = document.getElementById("loginUsername").value;
-  if (username.length!=0){
-    goodLUN=true;
-    if (goodLPW==true){
-      var loginSubmit=document.getElementById("login-submit");
-      loginSubmit.style.display="inline";
-    }
-  }
+	var bad=(user.value.length==0 || pass.value.length==0);
+	elt.disabled=bad;
+
+	elt.style.display=(bad ? "none" : "block");
 }
 
-function checkLoginPassword() {
-  var password = document.getElementById("loginPassword").value;
-  if (password.length!=0){
-    goodLPW=true;
-    if (goodLUN==true){
-      var loginSubmit=document.getElementById("login-submit");
-      loginSubmit.style.display="inline";
-    }
-  }
+function hashLoginPassword()
+{
+	var user=document.forms["loginForm"]["username"];
+	var pass=document.forms["loginForm"]["password"];
+	if (user.value.length==0 || pass.value.length==0) // Sanity check.
+		return false;
+	var hash=sha3_512(pass.value);
+	if (true) // We need this, because the browser won't let us change the form outside of a conditional
+		pass.value=hash;
 }
