@@ -1,7 +1,7 @@
 <?php
 $CONFIG=array(
 	"username" => "root",
-	"password" => "password",
+	"password" => "",
 	"host" => "localhost",
 	"dbname" => "GAMR"
 )

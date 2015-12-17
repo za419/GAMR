@@ -1,9 +1,15 @@
 <?php
   require("../include/db_config.php");
   session_start();
-  $username=$_SESSION['username'];
-  $connection=mysqli_connect($CONFIG["host"],$CONFIG["username"],$CONFIG["password"],$CONFIG["dbname"]) or die("Could not connect to the server.");
-  $query=mysqli_query($connection,"SELECT * FROM users WHERE username='$username'");
+
+  //Find out the session's UID
+  $session_number=$_SESSION["loginID"];
+  $connection=mysqli_connect($CONFIG["host"],$CONFIG["username"],$CONFIG["password"],$CONFIG['dbname']) or die("Could not connect to the server.");
+  $result=mysqli_query($connection,"SELECT uid FROM sessions WHERE session='$session_number'");
+  $uid=mysqli_fetch_row($result)[0];
+
+  //Find out the profile info of the specific UID
+  $query=mysqli_query($connection,"SELECT username,email,firstname,lastname,about FROM users WHERE UID='$uid'");
   while($row=mysqli_fetch_array($query)){
     $username=$row['username'];
     $email=$row['email'];
@@ -11,9 +17,6 @@
     $lname=$row['lastname'];
     $about=$row['about'];
   }
-
-
-
 ?>
 <html>
   <head>
