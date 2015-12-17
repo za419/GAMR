@@ -1,25 +1,25 @@
 <?php
 if (!isset($_SESSION['loginID']))
 {
-	echo (
-	'<div id="headerLoginBox">
-		<div id="loginForm">
-			<form name="loginForm" action="../login.php" onsubmit="hashLoginPassword()" method="POST">
-				<div>
-					<fieldset>
-						<label for="loginUsername">Username</label>
-						<input id="loginUsername" type="text" name="username" placeholder="Username" align="right" required>
-					</fieldset>
-					<fieldset>
-						<label for="loginPassword">Password</label>
-						<input id="loginPassword" type="password" name="password" placeholder="Password" align="right" required>
-					</fieldset>
-					<input id="login-submit" type="submit">
-				</div>
-				<br>
-			</form>
-		</div>
-	</div>;');
+	echo ('<div id="headerLoginBox">
+			<div id="loginForm">
+				<form name="loginForm" action="../login.php" onsubmit="hashLoginPassword()" method="POST">
+					<div>
+						<fieldset>
+							<label for="loginUsername">Username</label>
+							<input id="loginUsername" type="text" name="username" placeholder="Username" align="right" oninput="checkLogin()" required>
+						</fieldset>
+						<fieldset>
+							<label for="loginPassword">Password</label>
+							<input id="loginPassword" type="password" name="password" placeholder="Password" align="right" oninput="checkLogin()" required>
+						</fieldset>
+						<input id="login-submit" type="submit">
+					</div>
+					<br>
+				</form>
+			</div>
+		</div>');
+}
 ?>
 
 <div id="header">

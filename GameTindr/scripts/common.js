@@ -26,11 +26,23 @@ $(document).ready(function()
 	});
 });
 
+function checkLogin()
+{
+	var user=document.getElementById("loginUsername");
+	var pass=document.getElementById("loginPassword");
+	var elt=document.getElementById("login-submit");
+
+	var bad=(user.value.length==0 || pass.value.length==0);
+	elt.disabled=bad;
+
+	elt.style.display=(bad ? "none" : "block");
+}
+
 function hashLoginPassword()
 {
 	var user=document.forms["loginForm"]["username"];
 	var pass=document.forms["loginForm"]["password"];
-	if (user.value.length==0 || pass.value.length==0)
+	if (user.value.length==0 || pass.value.length==0) // Sanity check.
 		return false;
 	var hash=sha3_512(pass.value);
 	if (true) // We need this, because the browser won't let us change the form outside of a conditional

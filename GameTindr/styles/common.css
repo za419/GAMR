@@ -234,6 +234,7 @@ blockquote:before {
 #login-submit {
 	background-color:white;
 	font-family:'Raleway',sans-serif;
+	display:none;
 	border:none;
 	cursor:pointer;
 	color:#FF7D39;
