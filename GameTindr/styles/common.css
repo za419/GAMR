@@ -192,6 +192,11 @@ ol.horizontal li,ul.horizontal li {
 	color: #4e2a84
 }
 
+.centered {
+	text-align:center;
+	margin:auto
+}
+
 blockquote {
   background: #f9f9f9;
   border-left: 10px solid #CCC;

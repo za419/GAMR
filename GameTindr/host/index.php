@@ -9,6 +9,9 @@
 </head>
 <body>
 	<?php include("../include/header.php"); ?>
+		<h1 id="title">Thank you for hosting a game!</h1>
+		<h3 class="centered">We just need a little bit of information from you to set this up.</h2>
+		<br>
 		<form id="new-game">
 			<input type="text" placeholder="Which game are you playing?">
 			<input type="number" placeholder="How many people do you want?">
