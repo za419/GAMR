@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <?php include("../include/common.html"); ?>
-  <link rel="stylesheet" type="text/css" href="../styles/register.css">
-  <meta name="apple-mobile-web-app-title" content="Register for GAMR">
-  <meta name="og:title" content="Register for GAMR">
-  <?php
+<?php include("../include/common.html"); ?>
+<link rel="stylesheet" type="text/css" href="../styles/register.css">
+<meta name="apple-mobile-web-app-title" content="Register for GAMR">
+<meta name="og:title" content="Register for GAMR">
+<?php
 	if (!isset($_POST['confirm-password']))
 		echo "<script src='../scripts/register-validate.js'></script>";
-  ?>
-  <title>Register for GAMR</title>
+?>
+<title>Register for GAMR</title>
 </head>
 <body>
-  <?php include("../include/header.php"); ?>
-  <h1 id="title">Thank you for choosing <span class="gamr">GAMR</span></h1>
-  <br>
-  <?php
+<?php include("../include/header.php"); ?>
+<h1 id="title">Thank you for choosing <span class="gamr">GAMR</span></h1>
+<br>
+<?php
 	require("../include/db_config.php");
 	if (isset($_POST['confirm-password'])) {
 		//TODO Add email verification.
@@ -88,6 +88,6 @@
 			</form>
 EOT;
 	}
-  include("../include/footer.html"); ?>
+include("../include/footer.html"); ?>
 </body>
 </html>

@@ -3,8 +3,8 @@
 <head>
 	<?php include("../include/common.html"); ?>
 	<link rel="stylesheet" type="text/css" href="../styles/host.css">
-    <meta name="apple-mobile-web-app-title" content="GAMR - Host A Game">
-    <meta name="og:title" content="GAMR - Host A Game">
+	<meta name="apple-mobile-web-app-title" content="GAMR - Host A Game">
+	<meta name="og:title" content="GAMR - Host A Game">
 	<title>Host A Game</title>
 </head>
 <body>

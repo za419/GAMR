@@ -10,7 +10,7 @@ $uid=mysqli_fetch_row($result)[0];
 
 //Find out the profile info of the specific UID
 $query=mysqli_query($connection,"SELECT username,email,firstname,lastname,about FROM users WHERE UID='$uid'");
-while($row=mysqli_fetch_array($query)){
+while($row=mysqli_fetch_array($query)) {
 	$username=$row['username'];
 	$email=$row['email'];
 	$fname=$row['firstname'];
