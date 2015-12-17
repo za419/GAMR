@@ -1,9 +1,9 @@
 function signUp() {
-  window.location.replace('../register/');
+  window.location.replace('/register/');
 }
 
 function toProfile() {
-  window.location.replace('../profile/');
+  window.location.replace('/profile/');
 }
 
 function donateButton() {
@@ -11,7 +11,7 @@ function donateButton() {
 }
 
 function logOut() {
-  window.location.replace('../logout.php')
+  window.location.replace('/logout.php')
 }
 
 $(document).ready(function()

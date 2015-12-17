@@ -61,12 +61,12 @@ if (!isset($_SESSION['loginID']))
 
 	<ul class="horizontal" id="headerNav">
 		<li class="gamr"><a href="/index.php">GAMR</a></li>
-		<li><a href="/about">About</a></li>
-		<li><a href="/find">Find</a></li>
-		<li><a href="/host">Host</a></li>
+		<li><a href="/about/">About</a></li>
+		<li><a href="/find/">Find</a></li>
+		<li><a href="/host/">Host</a></li>
 		<?php
 			if(isset($_SESSION['loginID'])) {
-				echo("<li><a href='/profile'>Profile</a></li>");
+				echo("<li><a href='/profile/'>Profile</a></li>");
 			}
 		?>
 	</ul>
