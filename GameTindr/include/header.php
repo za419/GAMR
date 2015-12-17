@@ -65,7 +65,7 @@ if (!isset($_SESSION['loginID']))
 		<li><a href="/find">Find</a></li>
 		<li><a href="/host">Host</a></li>
 		<?php
-			if(isset($_SESSION['loginID'])){
+			if(isset($_SESSION['loginID'])) {
 				echo("<li><a href='/profile'>Profile</a></li>");
 			}
 		?>
