@@ -27,7 +27,7 @@
 	margin:0;
 }
 
-#new-game input[type="submit"]:hover {
+#new-game input[type="submit"]:hover:not([disabled]) {
 	-webkit-transition: background .3s ease-out;
 	-moz-transition: background .3s ease-out;
 	-o-transition: background .3s ease-out;
